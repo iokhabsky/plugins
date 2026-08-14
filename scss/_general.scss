@@ -1,0 +1,45 @@
+html {
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: $base_color;
+}
+
+ul {
+    li {
+        list-style-type: none;
+    }
+}
+
+input,button {
+    &:focus {
+        outline: none;
+    }
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: $font_color;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
