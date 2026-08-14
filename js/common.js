@@ -33,7 +33,6 @@ window.onload = () => {
                 if(options.i < slides.length - 1) options.i++        
                 break;
         }
-        console.log(options.i)
         wrapper.style.transform = `translateX(-${options.i * options.w}px)`;
     }
 
