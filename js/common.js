@@ -3,7 +3,7 @@ window.onload = () => {
     const slider = document.querySelector(".slider");
     const wrapper = document.querySelector(".slides");
     const slides = [...document.querySelectorAll(".slide")];
-    const activeNum = slides.indexOf(document.querySelector(".slide.active"));
+    let activeNum = slides.indexOf(document.querySelector(".slide.active"));
     const buttons = document.querySelectorAll(".slide-arrow");
 
     const options = {
@@ -33,7 +33,10 @@ window.onload = () => {
                 if(options.i < slides.length - 1) options.i++        
                 break;
         }
+        slides[activeNum].classList.remove('active');
+        activeNum = options.i;
         wrapper.style.transform = `translateX(-${options.i * options.w}px)`;
+        slides[activeNum].classList.add('active');
     }
 
     function setUI() {
