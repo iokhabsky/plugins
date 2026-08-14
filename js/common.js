@@ -14,8 +14,6 @@ window.onload = () => {
         i: activeNum
     };
 
-    // console.log(options.w + " " + options.h);
-
     setSlider();
     setUI();
 
