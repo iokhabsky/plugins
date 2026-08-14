@@ -130,5 +130,10 @@
             margin-left: 12px;
             
         }
+
+        &.disabled {
+            opacity: 0.3;
+            cursor: not-allowed;        
+        }
     }
 }

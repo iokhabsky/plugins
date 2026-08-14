@@ -8,7 +8,7 @@ window.onload = () => {
 
     const options = {
         mode: 'horizontal',
-        effect: 'sideMove',
+        effect: 'move',
         w: slider.offsetWidth,
         h: slider.offsetHeight,
         i: activeNum
@@ -30,11 +30,11 @@ window.onload = () => {
                 if(options.i > 0) options.i--
                 break;
             case 'next':
-                if(options.i < slides.length - 1) options.i++            
+                if(options.i < slides.length - 1) options.i++        
                 break;
         }
         console.log(options.i)
-        wrapper.style.transform = `translateX(-${options.i * options.w}px)`;    
+        wrapper.style.transform = `translateX(-${options.i * options.w}px)`;
     }
 
     function setUI() {

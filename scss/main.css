@@ -168,4 +168,8 @@ body {
 .slide-arrow.next-slide:before {
   transform: rotate(135deg);
   margin-left: 12px;
+}
+.slide-arrow.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
 }/*# sourceMappingURL=main.css.map */
