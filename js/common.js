@@ -9,15 +9,22 @@ window.onload = () => {
     const options = {
         mode: 'horizontal',
         effect: 'move',
-        w: slider.offsetWidth,
-        h: slider.offsetHeight,
+        w: null,
+        h: null,
         i: activeNum
     };
+
+    window.addEventListener('resize', (event) => {
+        setSlider();
+        moveSlider();
+    });
 
     setSlider();
     setUI();
 
     function setSlider() {
+        options.w = slider.offsetWidth;
+        options.h = slider.offsetHeight;
         slides.forEach(slide => {
             slide.style.width = options.w + "px";
             slide.style.height = options.h + "px";
@@ -31,12 +38,23 @@ window.onload = () => {
                 break;
             case 'next':
                 if(options.i < slides.length - 1) options.i++        
-                break;
+                break;  
         }
         slides[activeNum].classList.remove('active');
         activeNum = options.i;
         wrapper.style.transform = `translateX(-${options.i * options.w}px)`;
         slides[activeNum].classList.add('active');
+
+        // disable buttons
+        if(activeNum === 0) {
+            buttons[0].classList.add('disabled');
+        } else if(activeNum === slides.length - 1) {
+            buttons[1].classList.add('disabled');
+        } else {
+            buttons.forEach(button => {
+                button.classList.remove('disabled');
+            })
+        }
     }
 
     function setUI() {
