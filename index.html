@@ -16,67 +16,521 @@
         <!-- Apple devices -->
         <link rel="apple-touch-icon" sizes="180x180"
             href="./img/favicon/apple-touch-icon.png">
-        <title>Slider</title>
+        <title>Plugins Page</title>
     </head>
 
     <body>
 
-        <div class="slider" data-mode="horizontal">
-            <div class="slides">
-                <div class="slide active">
-                    <div class="slide-text">
-                        <h2 class="slide-title">
-                            Slide title on your website 1
-                        </h2>
-                        <h3 class="slide-subtitle">
-                            Slide text under the title for your Website
-                        </h3>
-                        <a href="#" class="slide-link">
-                            Read More
-                        </a>
-                    </div>
-                    <img src="img/slide1.jpg" alt="slide image 1">
-                </div>
-                <div class="slide">
-                    <div class="slide-text">
-                        <h2 class="slide-title">
-                            Slide title on your website 2
-                        </h2>
-                        <h3 class="slide-subtitle">
-                            Slide text under the title for your Website
-                        </h3>
-                        <a href="#" class="slide-link">
-                            Read More
-                        </a>
-                    </div>
-                    <img src="img/slide2.jpg" alt="slide image 2">
-                </div>
-                <div class="slide">
-                    <div class="slide-text">
-                        <h2 class="slide-title">
-                            Slide title on your website 3
-                        </h2>
-                        <h3 class="slide-subtitle">
-                            Slide text under the title for your Website
-                        </h3>
-                        <a href="#" class="slide-link">
-                            Read More
-                        </a>
-                    </div>
-                    <img src="img/slide3.jpg" alt="slide image 3">
-                </div>
-            </div>
-            <div class="slider-nav">
-                <div class="prev-slide slide-arrow disabled">
+  <header class="header">
+    <a href="#" class="logo">
+      <span class="logo__icon">✦</span>
+      SuspCode
+    </a>
 
-                </div>
-                <div class="next-slide slide-arrow">
+    <nav class="nav">
+      <a href="#" class="nav__link nav__link--active">Плагіни</a>
+      <a href="#" class="nav__link">Документація</a>
+      <a href="#" class="nav__link">Підтримка</a>
+    </nav>
 
-                </div>
-            </div>
+    <a href="#" class="header__button">
+      Чекнути Плагіни
+      <span>→</span>
+    </a>
+  </header>
+
+
+  <main>
+
+    <section class="plugins">
+
+      <div class="plugins__top">
+
+        <div>
+          <span class="section-label">Бібліотека простих плагінів</span>
+
+          <h2 class="section-title">
+            Перегляньте мою колекцію простих плагінів
+          </h2>
         </div>
 
-        <script src="js/common.js"></script>
-    </body>
+        <div class="search">
+          <span>⌕</span>
+          <input
+            type="text"
+            placeholder="Шукати плагін..."
+          >
+        </div>
+
+      </div>
+
+
+      <div class="filters">
+
+        <button class="filter filter--active">
+          Всі плагіни
+        </button>
+
+        <button class="filter">
+          Контент
+        </button>
+
+        <button class="filter">
+          Медіа
+        </button>
+
+        <button class="filter">
+          Форми
+        </button>
+
+        <button class="filter">
+          Інтераткивні
+        </button>
+
+        <button class="filter">
+          Навігація
+        </button>
+
+        <button class="filter">
+          Утиліти
+        </button>
+
+      </div>
+
+
+      <div class="plugins__grid">
+
+
+        <!-- Slider -->
+
+        <article class="plugin-card">
+
+          <div class="plugin-preview plugin-preview--slider">
+
+            <div class="slider__image">
+              <div class="slider__mountain"></div>
+
+              <button class="slider__arrow slider__arrow--left">
+                ‹
+              </button>
+
+              <button class="slider__arrow slider__arrow--right">
+                ›
+              </button>
+
+              <div class="slider__dots">
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="plugin-card__body">
+
+            <h3>Slider</h3>
+
+            <p>
+              Респонсивні та красиві слайди 
+              контенту з плавними анімаціями.
+            </p>
+
+            <div class="plugin-card__footer">
+
+              <div class="rating">
+                <span>★</span>
+                4.9
+              </div>
+
+              <a href="/slider/index.html" class="plugin-card__button">
+                Відкрити →
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- Accordion -->
+
+        <article class="plugin-card">
+
+          <div class="plugin-preview plugin-preview--accordion">
+
+            <div class="accordion-item">
+              What is Accordion Pro?
+              <span>+</span>
+            </div>
+
+            <div class="accordion-item accordion-item--active">
+              How does it work?
+              <span>−</span>
+            </div>
+
+            <div class="accordion-item">
+              Can I customize it?
+              <span>+</span>
+            </div>
+
+          </div>
+
+          <div class="plugin-card__body">
+
+            <h3>Accordion Pro</h3>
+
+            <p>
+              Elegant collapsible content with smooth
+              transitions.
+            </p>
+
+            <div class="plugin-card__footer">
+
+              <div class="rating">
+                <span>★</span>
+                4.8
+              </div>
+
+              <a href="#" class="plugin-card__button">
+                →
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- Modal -->
+
+        <article class="plugin-card">
+
+          <div class="plugin-preview plugin-preview--modal">
+
+            <div class="modal-window">
+
+              <button class="modal-window__close">
+                ×
+              </button>
+
+              <div class="modal-window__icon">
+                ✉
+              </div>
+
+              <strong>
+                Stay updated
+              </strong>
+
+              <small>
+                Subscribe to our newsletter
+              </small>
+
+              <button class="modal-window__button">
+                Subscribe
+              </button>
+
+            </div>
+
+          </div>
+
+          <div class="plugin-card__body">
+
+            <h3>Modal Popup</h3>
+
+            <p>
+              Customizable modal windows for any
+              website interaction.
+            </p>
+
+            <div class="plugin-card__footer">
+
+              <div class="rating">
+                <span>★</span>
+                4.7
+              </div>
+
+              <a href="#" class="plugin-card__button">
+                →
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- Draggable -->
+
+        <article class="plugin-card">
+
+          <div class="plugin-preview plugin-preview--drag">
+
+            <div class="drag-zone">
+
+              <div class="drag-card">
+                <span>✦</span>
+              </div>
+
+              <div class="drag-cursor">
+                👆
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="plugin-card__body">
+
+            <h3>Draggable Blocks</h3>
+
+            <p>
+              Add drag and drop interactions to
+              any content.
+            </p>
+
+            <div class="plugin-card__footer">
+
+              <div class="rating">
+                <span>★</span>
+                4.9
+              </div>
+
+              <a href="#" class="plugin-card__button">
+                →
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- Tabs -->
+
+        <article class="plugin-card">
+
+          <div class="plugin-preview plugin-preview--tabs">
+
+            <div class="tabs">
+
+              <div class="tabs__nav">
+                <span class="active">Overview</span>
+                <span>Features</span>
+                <span>Reviews</span>
+              </div>
+
+              <div class="tabs__content">
+
+                <div class="tabs__icon">
+                  ◈
+                </div>
+
+                <div>
+                  <strong>
+                    Powerful components
+                  </strong>
+
+                  <small>
+                    Built for modern interfaces
+                  </small>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="plugin-card__body">
+
+            <h3>Tabs Manager</h3>
+
+            <p>
+              Create smooth and responsive
+              tabbed interfaces.
+            </p>
+
+            <div class="plugin-card__footer">
+
+              <div class="rating">
+                <span>★</span>
+                4.8
+              </div>
+
+              <a href="#" class="plugin-card__button">
+                →
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- Gallery -->
+
+        <article class="plugin-card">
+
+          <div class="plugin-preview plugin-preview--gallery">
+
+            <div class="gallery">
+
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div>+</div>
+
+            </div>
+
+          </div>
+
+          <div class="plugin-card__body">
+
+            <h3>Image Gallery</h3>
+
+            <p>
+              Responsive galleries with lightbox
+              and filtering.
+            </p>
+
+            <div class="plugin-card__footer">
+
+              <div class="rating">
+                <span>★</span>
+                4.7
+              </div>
+
+              <a href="#" class="plugin-card__button">
+                →
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- Notifications -->
+
+        <article class="plugin-card">
+
+          <div class="plugin-preview plugin-preview--notifications">
+
+            <div class="notification notification--success">
+              ✓ Changes saved successfully
+            </div>
+
+            <div class="notification notification--warning">
+              ! Action requires attention
+            </div>
+
+            <div class="notification notification--info">
+              i New update available
+            </div>
+
+          </div>
+
+          <div class="plugin-card__body">
+
+            <h3>Notification Bar</h3>
+
+            <p>
+              Beautiful alerts and notification
+              messages.
+            </p>
+
+            <div class="plugin-card__footer">
+
+              <div class="rating">
+                <span>★</span>
+                4.8
+              </div>
+
+              <a href="#" class="plugin-card__button">
+                →
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- Countdown -->
+
+        <article class="plugin-card">
+
+          <div class="plugin-preview plugin-preview--countdown">
+
+            <div class="countdown">
+
+              <div>
+                <strong>12</strong>
+                <small>Days</small>
+              </div>
+
+              <div>
+                <strong>08</strong>
+                <small>Hours</small>
+              </div>
+
+              <div>
+                <strong>42</strong>
+                <small>Min</small>
+              </div>
+
+              <div>
+                <strong>18</strong>
+                <small>Sec</small>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="plugin-card__body">
+
+            <h3>Countdown Timer</h3>
+
+            <p>
+              Add urgency with beautiful
+              customizable timers.
+            </p>
+
+            <div class="plugin-card__footer">
+
+              <div class="rating">
+                <span>★</span>
+                4.9
+              </div>
+
+              <a href="#" class="plugin-card__button">
+                →
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
 
 </html>
